@@ -12,4 +12,7 @@ categories:
 ---
 
 # Hello
+
 This is my first blog article!
+
+Now I want to know why hexo doesn't generate `html` file
