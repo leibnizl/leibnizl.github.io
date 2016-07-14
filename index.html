@@ -298,36 +298,18 @@
 
       
         
-          
-            <p>由于某些原因，Python3并不兼容Python2，而在学习Python的过程中，经常需要使用不同的版本，因此，能够灵活安装和切换Python版本的pyenv就应运而生。</p>
-<h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h2><p>github地址：<a href="https://github.com/yyuu/pyenv" target="_blank" rel="external">pyenv</a></p>
+          <p>由于某些原因，Python3并不兼容Python2，而在学习Python的过程中，经常需要使用不同的版本，因此，能够灵活安装和切换Python版本的pyenv就应运而生。</p>
+<h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h2><p>github地址：<a href="https://github.com/yyuu/pyenv">pyenv</a></p>
 <h2 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h2><p>在安装之前需要安装些依赖：</p>
 <blockquote>
 <p>$ sudo apt-get update<br>$ sudo apt-get install make build-essential libssl-dev zlib1g-dev<br>$ sudo apt-get install libbz2-dev libreadline-dev libsqlite3-dev wget curl<br>$ sudo apt-get install llvm libncurses5-dev libncursesw5-dev</p>
 </blockquote>
-<p>github地址：<a href="https://github.com/yyuu/pyenv-installer" target="_blank" rel="external">pyenv-installer</a><br>推荐方法：<br>安装:</p>
-<blockquote>
-<p>$ curl -L <a href="https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer" target="_blank" rel="external">https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer</a> | bash</p>
-</blockquote>
-<p>更新:</p>
-<blockquote>
-<p>$ pyenv update</p>
-</blockquote>
-<p>卸载：</p>
-<blockquote>
-<p>$ rm -fr ~/.pyenv</p>
-<p>由于作者并不推荐PyPi方式，故这里不介绍它，若想用该方式可以去pyenv-installer的github网站上查看。</p>
-</blockquote>
-<h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><p><em>要学会使用终端的help命令</em><br>在终端中输入<code>pyenv -h</code>，结果如图所示：<br><img src="/images/pyenv.png" alt=""><br>由图可知，安装一个Python版本到使用的步骤如下：</p>
-<ol>
-<li>首先应当使用<code>pyenv install</code>安装Python版本，可问题是，并不知道如何指定哪个版本，这时，使用<code>Tab</code>键可以给出提示，如图所示（内容太多，只截取部分）：<br><img src="/images/pyenv-install.png" alt=""><br>然后在后面写上想要安装的版本即可。</li>
-<li>安装之后，应当使用<code>pyenv rehash</code>来重新索引。</li>
-<li>使用<code>pyenv versions</code>查看系统安装python版本。</li>
-<li>启用安装的版本，使用<code>pyenv local xxx</code>或<code>pyenv global xxx</code>，其中xxx对应版本名，可使用<code>Tab</code>键给出提示，local和global的区别在<code>pyenv -h</code>所示的截图中有提到。</li>
-</ol>
-<p>启用了安装的版本后，在终端执行python，pip等等命令时，其python版本自然就是所启用的版本了，通过次方法可以安装不同的版本，在各个版本中安装所需的库，然后随意切换而不会互相干扰。</p>
-
-          
+<p>github地址：<a href="https://github.com/yyuu/pyenv-installer">pyenv-installer</a></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/14/Python版本管理之Pyenv/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -425,15 +407,12 @@
 
       
         
-          
-            <p>主要是使用<code>System.getProperties().getProperty(xxx)</code>方法，见如下代码：</p>
-<figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">System</span>.out.println(<span class="string">"===========os.name:"</span>+<span class="keyword">System</span>.getProperties().getProperty(<span class="string">"os.name"</span>));</div><div class="line"><span class="keyword">System</span>.out.println(<span class="string">"===========file.separator:"</span>+<span class="keyword">System</span>.getProperties().getProperty(<span class="string">"file.separator"</span>));</div></pre></td></tr></table></figure>
-<p>其中，<code>os.name</code>表示系统名字，<code>file.separator</code>表示分隔符（win上为反斜杠，linux和unix上为斜杠）</p>
-<p>故判断是否为linux或unix可用如下代码：</p>
-<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">if (<span class="name">System</span>.getProperties().getProperty(<span class="string">"file.separator"</span>).equals(<span class="string">"/"</span>)) xxx<span class="comment">;</span></div></pre></td></tr></table></figure>
-<p>当然也可使用<code>os.name</code>，但是上面的方法应该更简洁。</p>
-
-          
+          <p>主要是使用<code>System.getProperties().getProperty(xxx)</code>方法，见如下代码：</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/11/用java判断系统为linux或者windows/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -531,128 +510,15 @@
 
       
         
-          
-            <blockquote>
+          <blockquote>
 <p>linux下没有caj阅读器，然而知网的某些论文只提供了caj格式，所以对linux非常不友好。</p>
 </blockquote>
-<p>解决办法是找到这些论文的pdf下载链接。<br>方法：</p>
-<blockquote>
-<p>firefox中：下载Greasemonkey拓展，然后下载并安装<a href="https://greasyfork.org/zh-CN/scripts/18842-cnki-%E4%B8%AD%E5%9B%BD%E7%9F%A5%E7%BD%91-pdf-%E5%85%A8%E6%96%87%E4%B8%8B%E8%BD%BD-%E7%89%B9%E5%88%B6%E7%89%88" target="_blank" rel="external">脚本</a><br>在chrome中，直接下载该脚本然后像离线安装crx文件一样安装该脚本，脚本地址和firefox上的一样。</p>
-</blockquote>
-<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ol>
-<li><a href="http://blog.yuelong.info/post/cnki-pdf-js.html" target="_blank" rel="external">CNKI PDF 全文下载用户脚本</a></li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/10/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-10T23:40:17+08:00" content="2016-07-10">
-              2016-07-10
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/10/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/10/hello-world/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
+<p>解决办法是找到这些论文的pdf下载链接。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/11/linux下下载知网的论文/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -720,7 +586,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
