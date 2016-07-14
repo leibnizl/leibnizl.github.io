@@ -98,9 +98,9 @@ $ sudo apt-get update$ sudo apt-get install make build-essential libssl-dev">
 安装方法在安装之前需要安装些依赖：
 
 $ sudo apt-get update$ sudo apt-get install make build-essential libssl-dev">
-<meta property="og:image" content="http://lebnizl.github.io/home/yb/Pictures/pyenv.png">
-<meta property="og:image" content="http://lebnizl.github.io/home/yb/Pictures/pyenv-install.png">
-<meta property="og:updated_time" content="2016-07-14T15:53:54.084Z">
+<meta property="og:image" content="http://lebnizl.github.io/images/pyenv.png">
+<meta property="og:image" content="http://lebnizl.github.io/images/pyenv-install.png">
+<meta property="og:updated_time" content="2016-07-14T16:16:50.636Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python版本管理之Pyenv">
 <meta name="twitter:description" content="由于某些原因，Python3并不兼容Python2，而在学习Python的过程中，经常需要使用不同的版本，因此，能够灵活安装和切换Python版本的pyenv就应运而生。
@@ -108,7 +108,7 @@ $ sudo apt-get update$ sudo apt-get install make build-essential libssl-dev">
 安装方法在安装之前需要安装些依赖：
 
 $ sudo apt-get update$ sudo apt-get install make build-essential libssl-dev">
-<meta name="twitter:image" content="http://lebnizl.github.io/home/yb/Pictures/pyenv.png">
+<meta name="twitter:image" content="http://lebnizl.github.io/images/pyenv.png">
 
 
 
@@ -327,9 +327,9 @@ $ sudo apt-get update$ sudo apt-get install make build-essential libssl-dev">
 <p>$ rm -fr ~/.pyenv</p>
 <p>由于作者并不推荐PyPi方式，故这里不介绍它，若想用该方式可以去pyenv-installer的github网站上查看。</p>
 </blockquote>
-<h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><p><em>要学会使用终端的help命令</em><br>在终端中输入<code>pyenv -h</code>，结果如图所示：<br><img src="/home/yb/Pictures/pyenv.png" alt=""><br>由图可知，安装一个Python版本到使用的步骤如下：</p>
+<h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><p><em>要学会使用终端的help命令</em><br>在终端中输入<code>pyenv -h</code>，结果如图所示：<br><img src="/images/pyenv.png" alt=""><br>由图可知，安装一个Python版本到使用的步骤如下：</p>
 <ol>
-<li>首先应当使用<code>pyenv install</code>安装Python版本，可问题是，并不知道如何指定哪个版本，这时，使用<code>Tab</code>键可以给出提示，如图所示（内容太多，只截取部分）：<br><img src="/home/yb/Pictures/pyenv-install.png" alt=""><br>然后在后面写上想要安装的版本即可。</li>
+<li>首先应当使用<code>pyenv install</code>安装Python版本，可问题是，并不知道如何指定哪个版本，这时，使用<code>Tab</code>键可以给出提示，如图所示（内容太多，只截取部分）：<br><img src="/images/pyenv-install.png" alt=""><br>然后在后面写上想要安装的版本即可。</li>
 <li>安装之后，应当使用<code>pyenv rehash</code>来重新索引。</li>
 <li>使用<code>pyenv versions</code>查看系统安装python版本。</li>
 <li>启用安装的版本，使用<code>pyenv local xxx</code>或<code>pyenv global xxx</code>，其中xxx对应版本名，可使用<code>Tab</code>键给出提示，local和global的区别在<code>pyenv -h</code>所示的截图中有提到。</li>
