@@ -248,6 +248,133 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/14/Python版本管理之Pyenv/" itemprop="url">
+                  Python版本管理之Pyenv
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-14T23:11:23+08:00" content="2016-07-14">
+              2016-07-14
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/14/Python版本管理之Pyenv/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/14/Python版本管理之Pyenv/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>由于某些原因，Python3并不兼容Python2，而在学习Python的过程中，经常需要使用不同的版本，因此，能够灵活安装和切换Python版本的pyenv就应运而生。</p>
+<h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h2><p>github地址：<a href="https://github.com/yyuu/pyenv" target="_blank" rel="external">pyenv</a></p>
+<h2 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h2><p>在安装之前需要安装些依赖：</p>
+<blockquote>
+<p>$ sudo apt-get update<br>$ sudo apt-get install make build-essential libssl-dev zlib1g-dev<br>$ sudo apt-get install libbz2-dev libreadline-dev libsqlite3-dev wget curl<br>$ sudo apt-get install llvm libncurses5-dev libncursesw5-dev</p>
+</blockquote>
+<p>github地址：<a href="https://github.com/yyuu/pyenv-installer" target="_blank" rel="external">pyenv-installer</a><br>推荐方法：<br>安装:</p>
+<blockquote>
+<p>$ curl -L <a href="https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer" target="_blank" rel="external">https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer</a> | bash</p>
+</blockquote>
+<p>更新:</p>
+<blockquote>
+<p>$ pyenv update</p>
+</blockquote>
+<p>卸载：</p>
+<blockquote>
+<p>$ rm -fr ~/.pyenv</p>
+<p>由于作者并不推荐PyPi方式，故这里不介绍它，若想用该方式可以去pyenv-installer的github网站上查看。</p>
+</blockquote>
+<h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><p><em>要学会使用终端的help命令</em><br>在终端中输入<code>pyenv -h</code>，结果如图所示：<br><img src="/home/yb/Pictures/pyenv.png" alt=""><br>由图可知，安装一个Python版本到使用的步骤如下：</p>
+<ol>
+<li>首先应当使用<code>pyenv install</code>安装Python版本，可问题是，并不知道如何指定哪个版本，这时，使用<code>Tab</code>键可以给出提示，如图所示（内容太多，只截取部分）：<br><img src="/home/yb/Pictures/pyenv-install.png" alt=""><br>然后在后面写上想要安装的版本即可。</li>
+<li>安装之后，应当使用<code>pyenv rehash</code>来重新索引。</li>
+<li>使用<code>pyenv versions</code>查看系统安装python版本。</li>
+<li>启用安装的版本，使用<code>pyenv local xxx</code>或<code>pyenv global xxx</code>，其中xxx对应版本名，可使用<code>Tab</code>键给出提示，local和global的区别在<code>pyenv -h</code>所示的截图中有提到。</li>
+</ol>
+<p>启用了安装的版本后，在终端执行python，pip等等命令时，其python版本自然就是所启用的版本了，通过次方法可以安装不同的版本，在各个版本中安装所需的库，然后随意切换而不会互相干扰。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/11/用java判断系统为linux或者windows/" itemprop="url">
                   用java判断系统为linux或者windows
                 </a>
@@ -593,7 +720,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -603,7 +730,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
